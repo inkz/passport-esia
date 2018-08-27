@@ -1,0 +1,13 @@
+{
+  "name": "passport-esia",
+  "version": "0.0.0",
+  "description": "ESIA authentication strategy for Passport",
+  "main": "./lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "inkz"
+  },
+  "license": "ISC"
+}
