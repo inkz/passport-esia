@@ -7,7 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
-    "name": "inkz"
+    "name": "inkz",
+    "email": "inkz@xakep.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/inkz/passport-esia.git"
   },
   "license": "ISC"
 }
