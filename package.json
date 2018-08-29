@@ -14,5 +14,8 @@
     "type": "git",
     "url": "git://github.com/inkz/passport-esia.git"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "passport-oauth2": "^1.4.0"
+  }
 }
