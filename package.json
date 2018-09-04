@@ -16,6 +16,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "passport-oauth2": "^1.4.0"
+    "node-forge": "^0.7.6",
+    "oauth": "^0.9.15",
+    "passport-strategy": "^1.0.0"
   }
 }
