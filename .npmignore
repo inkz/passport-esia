@@ -1,0 +1,8 @@
+Makefile
+docs/
+examples/
+reports/
+test/
+
+.eslintrc.js
+.travis.yml
