@@ -1,10 +1,10 @@
 {
   "name": "passport-esia",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ESIA authentication strategy for Passport",
   "main": "./lib",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js test/**/*.test.js"
   },
   "author": {
     "name": "inkz",
@@ -14,5 +14,15 @@
     "type": "git",
     "url": "git://github.com/inkz/passport-esia.git"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-forge": "^0.7.6",
+    "passport-oauth2": "^1.4.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-passport-strategy": "^1.0.1",
+    "mocha": "^5.2.0"
+  }
 }
