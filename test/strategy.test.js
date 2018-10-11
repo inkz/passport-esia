@@ -20,7 +20,8 @@ describe('Strategy', function() {
     const strategy = new EsiaStrategy({
       clientID: 'ABC123',
       key: sign.key,
-      certificate: sign.certificate
+      certificate: sign.certificate,
+      callbackURL: 'https://www.example.net/auth/example/callback'
     }, () => {});
     
     it('should be named esia', () => {
@@ -40,7 +41,8 @@ describe('Strategy', function() {
     const strategy = new EsiaStrategy({
       clientID: 'ABC123',
       key: sign.key,
-      certificate: sign.certificate
+      certificate: sign.certificate,
+      callbackURL: 'https://www.example.net/auth/example/callback'
     }, () => {});
     
     let urlParams;
@@ -62,8 +64,9 @@ describe('Strategy', function() {
       expect(urlParams.pathname).to.equal('/aas/oauth2/ac');
       const query = querystring.parse(urlParams.query);
       expect(Object.keys(query)).to.have.members([
-        'timestamp', 'access_type', 'client_secret', 'response_type', 'scope', 'state', 'client_id'
+        'timestamp', 'access_type', 'client_secret', 'response_type', 'scope', 'state', 'client_id', 'redirect_uri'
       ]);
+      expect(query.redirect_uri).to.equal('https://www.example.net/auth/example/callback');
       expect(query.response_type).to.equal('code');
       expect(query.access_type).to.equal('offline');
       expect(query.client_id).to.equal('ABC123');
